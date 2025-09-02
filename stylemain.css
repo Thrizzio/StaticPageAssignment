@@ -1,0 +1,28 @@
+.Home {
+    display: flex;
+    flex-direction: row; 
+    background-color: aqua;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+h1{
+    display: flex;
+    justify-self: start;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 10px;
+    background-color: lightgray;
+}
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
