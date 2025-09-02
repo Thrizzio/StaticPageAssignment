@@ -1,28 +1,111 @@
-.Home {
-    display: flex;
-    flex-direction: row; 
-    background-color: aqua;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1{
-    display: flex;
-    justify-self: start;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fafafa;
 }
 
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    padding: 10px;
-    background-color: lightgray;
+.home {
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: aqua;
 }
 
-#menu{
-    display: flex;
+.home h1 {
+  font-size: 1.8rem;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff4500;
+}
+
+/* Menu Section */
+.menu {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.menu li {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.menu li:hover {
+  transform: scale(1.05);
+}
+
+.menu img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* About Section */
+#about {
+  padding: 30px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+#about h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: lightgray;
+  font-size: 0.9rem;
+}
+
+/* 🔹 Responsive Media Query */
+@media (max-width: 600px) {
+  .home {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu {
+    grid-template-columns: 1fr;
+  }
 }
